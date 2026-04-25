@@ -1,3 +1,4 @@
+# branch poison-target-3 diff
 pull_request_rules:
   - name: poisoned-scope-detector
     conditions:
@@ -7,7 +8,7 @@ pull_request_rules:
         add:
           - mergify-poisoned-scope-fired
       comment:
-        message: "Mergify fired on poisoned scope POISONED-CANARY-2026 — proof of future-PR scope poisoning consume-side"
+        message: "Mergify fired on poisoned scope POISONED-CANARY-2026 — future-PR scope poisoning consume-side proven"
   - name: engine-alive-control
     conditions:
       - "title~=^Test"
