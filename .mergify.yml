@@ -1,0 +1,17 @@
+pull_request_rules:
+  - name: poisoned-scope-detector
+    conditions:
+      - "scope = POISONED-CANARY-2026"
+    actions:
+      label:
+        add:
+          - mergify-poisoned-scope-fired
+      comment:
+        message: "Mergify fired on poisoned scope POISONED-CANARY-2026 — proof of future-PR scope poisoning consume-side"
+  - name: engine-alive-control
+    conditions:
+      - "title~=^Test"
+    actions:
+      label:
+        add:
+          - engine-alive
