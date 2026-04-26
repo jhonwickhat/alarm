@@ -1,10 +1,11 @@
+# privesc bypass demo
 pull_request_rules:
-  - name: asymmetric-poc-detector
+  - name: should-fire-but-wont-mergify-disabled
     conditions:
-      - "scope = ASYMMETRIC-POC-PR15"
+      - "title~=^PRIVESC"
     actions:
       label:
         add:
-          - asymmetric-poc-fired
+          - mergify-was-active
       comment:
-        message: "F-MGF-SCOPE-POISON-001: scope ASYMMETRIC-POC-PR15 was pushed by abredhat (attacker w/ leaked ci key, NO GH access) BEFORE PR #15 existed. abredhat could not have done this without exploiting the bug."
+        message: "If you see this label, Mergify is processing PRs."
