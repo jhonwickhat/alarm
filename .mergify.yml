@@ -1,17 +1,10 @@
 pull_request_rules:
-  - name: poisoned-scope-detector
+  - name: poisoned-scope-detector-clean
     conditions:
-      - "scope = POISONED-CANARY-2026"
+      - "scope = CLEAN-CANARY-PR10"
     actions:
       label:
         add:
-          - mergify-poisoned-scope-fired
+          - clean-poison-fired
       comment:
-        message: "Mergify fired on poisoned scope POISONED-CANARY-2026 — proof of future-PR scope poisoning consume-side"
-  - name: engine-alive-control
-    conditions:
-      - "title~=^Test"
-    actions:
-      label:
-        add:
-          - engine-alive
+        message: "F-MGF-SCOPE-POISON-001 LIVE PoC: pre-pushed scope CLEAN-CANARY-PR10 fired on PR opened AFTER push. Critical bug."
