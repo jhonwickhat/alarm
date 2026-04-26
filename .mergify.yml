@@ -8,3 +8,5 @@ pull_request_rules:
           - asymmetric-poc-fired
       comment:
         message: "F-MGF-SCOPE-POISON-001: scope ASYMMETRIC-POC-PR15 was pushed by abredhat (attacker w/ leaked ci key, NO GH access) BEFORE PR #15 existed. abredhat could not have done this without exploiting the bug."
+merge_protections_settings:
+  reporting_method: check-runs
