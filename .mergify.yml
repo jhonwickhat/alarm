@@ -4,4 +4,4 @@ merge_protections:
     if: ["base = master"]
     success_conditions: ["label = security-approved"]
 merge_protections_settings:
-  reporting_method: check-runs
+  reporting_method: deployments
