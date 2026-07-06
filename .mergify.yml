@@ -1,1 +1,8 @@
-pull_request_rules: []
+pull_request_rules:
+  - name: probe
+    conditions:
+      - base = master
+      - "-closed"
+    actions:
+      comment:
+        message: "PROBEX mul=[{{ 7 * 7 }}] strmul=[{{ 7 * '7' }}] auth=[{{ author }}] upper=[{{ author | upper }}]"
