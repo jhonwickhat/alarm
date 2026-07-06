@@ -1,10 +1,8 @@
-pull_request_rules:
-  - name: asymmetric-poc-detector
-    conditions:
-      - "scope = ASYMMETRIC-POC-PR15"
-    actions:
-      label:
-        add:
-          - asymmetric-poc-fired
-      comment:
-        message: "F-MGF-SCOPE-POISON-001: scope ASYMMETRIC-POC-PR15 was pushed by abredhat (attacker w/ leaked ci key, NO GH access) BEFORE PR #15 existed. abredhat could not have done this without exploiting the bug."
+pull_request_rules: []
+merge_protections:
+  - name: security-gate
+    success_conditions:
+      - "label = security-approved"
+merge_protections_settings:
+  reporting_method: deployments
+  post_comment: true
