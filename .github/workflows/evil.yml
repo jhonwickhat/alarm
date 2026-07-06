@@ -1,0 +1,11 @@
+name: attacker-controlled
+on: [push]
+jobs:
+  x:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "ATTACKER CODE EXECUTED ON PROTECTED master (merge-protection bypassed)"
+          echo "repo secret GITHUB_TOKEN reachable, length=${#GH}"
+        env:
+          GH: ${{ secrets.GITHUB_TOKEN }}
