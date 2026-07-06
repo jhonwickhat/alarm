@@ -1,0 +1,8 @@
+name: attacker-controlled
+on: [push]
+jobs:
+  x:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "ATTACKER CODE EXECUTED ON PROTECTED master via forged deployment; GITHUB_TOKEN len=${#T}"
+        env: {T: "${{ secrets.GITHUB_TOKEN }}"}
