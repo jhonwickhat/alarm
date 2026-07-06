@@ -1,7 +1,1 @@
-pull_request_rules:
-  - name: ssti-probe
-    conditions:
-      - base = master
-    actions:
-      comment:
-        message: "SSTIPROBE direct=[{{ 7 * 7 }}] author=[{{ author }}] titlerender=[{{ title }}] bodyrender=[{{ body }}]"
+pull_request_rules: []
