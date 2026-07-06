@@ -1,8 +1,1 @@
-pull_request_rules:
-  - name: auto-merge-on-staging-deploy
-    conditions:
-      - base = master
-      - "deployment-success = staging"
-    actions:
-      merge:
-        method: merge
+pull_request_rules: []
