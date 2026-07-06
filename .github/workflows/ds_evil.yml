@@ -1,8 +1,0 @@
-name: ds-attacker
-on: [push]
-jobs:
-  x:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "ATTACKER CODE EXECUTED via forged deployment-success on master, GITHUB_TOKEN len=${#GH}"
-        env: {GH: "${{ secrets.GITHUB_TOKEN }}"}
