@@ -5,4 +5,4 @@ pull_request_rules:
       - "-closed"
     actions:
       comment:
-        message: "PROBEX mul=[{{ 7 * 7 }}] strmul=[{{ 7 * '7' }}] auth=[{{ author }}] upper=[{{ author | upper }}]"
+        message: "ESCTEST safe=[{{ 7*7 }}] cls=[{{ ().__class__ }}]"
