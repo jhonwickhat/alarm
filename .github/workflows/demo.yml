@@ -1,0 +1,7 @@
+name: demo-workflow
+on: [push]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'EXPLOIT SUCCESSFUL'
